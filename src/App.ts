@@ -42,16 +42,16 @@ class App {
         //lights
         const hemiLight = new THREE.HemisphereLight();
         hemiLight.name = 'hemi_light';
-        //this.scene.add(hemiLight);
+        this.scene.add(hemiLight);
 
         const light1  = new THREE.AmbientLight();
         light1.name = 'ambient_light';
-        //this.scene.add( light1 );
+        this.scene.add( light1 );
 
         const light2  = new THREE.DirectionalLight();
         light2.position.set(0.5, 0, 0.866); // ~60º
         light2.name = 'main_light';
-        //this.scene.add( light2 );
+        this.scene.add( light2 );
 
         this.camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 0.01, 100);
         this.user = new THREE.Group();
@@ -158,19 +158,19 @@ class App {
                     const action = this.mixer.clipAction( clip );
                     action.setLoop(THREE.LoopOnce,1);
                     action.clampWhenFinished = true;
-                    //action.play()
+                    action.play()
                     this.animations.push(action);
     
                     let clip1 = THREE.AnimationClip.findByName( clips, 'left-display' );
                     const action1 = this.mixer.clipAction( clip1 );
                     action1.setLoop(THREE.LoopRepeat,999);
-                    //action1.play();
+                    action1.play();
                     this.animations.push(action1);
                     
                     let clip2 = THREE.AnimationClip.findByName( clips, 'right-display' );
                     const action2 = this.mixer.clipAction( clip2 );
                     action2.setLoop(THREE.LoopRepeat,999);
-                    //action2.play();
+                    action2.play();
                     this.animations.push(action2);
                     
                     console.log(this.renderer)
@@ -237,7 +237,7 @@ class App {
 
         //this.pose = xrFrame.getViewerPose(this.xrReferenceSpace);
     
-        //this.mixer.update( this.delta );
+        this.mixer.update( this.delta );
 
         //this.updateAndMatchPhysics(this.delta,this.pose)
         this.renderer.render( this.scene, this.camera );
