@@ -5,8 +5,10 @@
     "main": "webpack.config.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "webpack --config webpack.dev.js",
-        "build": "webpack --config webpack.production.js"
+        "dev": "npm-run-all --parallel devBuild live",
+        "build": "webpack --config webpack.production.js",
+        "devBuild": "webpack --config webpack.dev.js",
+        "live": "live-server ./dist --port=1337"
     },
     "author": "",
     "license": "ISC",
@@ -15,6 +17,7 @@
         "@types/lodash": "^4.14.173",
         "@types/three": "^0.132.0",
         "@types/webxr": "^0.2.3",
+        "npm-run-all": "^4.1.5",
         "ts-loader": "^9.2.6",
         "typescript": "^4.4.3",
         "webpack": "^5.53.0",
