@@ -1,0 +1,31 @@
+{
+    "name": "bossarenavr",
+    "version": "1.0.0",
+    "description": "",
+    "main": "webpack.config.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/cannon": "^0.1.7",
+        "@types/lodash": "^4.14.173",
+        "@types/three": "^0.132.0",
+        "@types/webxr": "^0.2.3",
+        "ts-loader": "^9.2.6",
+        "typescript": "^4.4.3",
+        "webpack": "^5.53.0",
+        "webpack-cli": "^4.8.0",
+        "webpack-glsl-loader": "^1.0.1",
+        "webxr": "0.0.0",
+        "webxr-polyfill": "^2.0.3"
+    },
+    "dependencies": {
+        "cannon": "^0.6.2",
+        "lodash": "^4.17.21",
+        "stats-js": "^1.0.1",
+        "three": "^0.132.2"
+    }
+}
