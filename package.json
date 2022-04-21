@@ -8,7 +8,7 @@
         "dev": "npm-run-all --parallel devBuild live",
         "build": "webpack --config webpack.production.js",
         "devBuild": "webpack --config webpack.dev.js",
-        "live": "live-server ./dist --port=1338"
+        "live": "live-server ./dist --port=1337"
     },
     "author": "",
     "license": "ISC",
@@ -28,6 +28,7 @@
     },
     "dependencies": {
         "cannon": "^0.6.2",
+        "live-server": "^1.1.0",
         "lodash": "^4.17.21",
         "stats-js": "^1.0.1",
         "three": "^0.132.2"
